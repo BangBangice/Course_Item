@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Course_Item">
         <activity
-            android:name=".MainActivity"
+            android:name=".BookListMainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
