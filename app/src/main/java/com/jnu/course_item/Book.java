@@ -17,4 +17,8 @@ public class Book {
         return pictureId;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
 }
