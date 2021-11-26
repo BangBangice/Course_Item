@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Course_Item">
         <activity
+            android:name=".InputActivity"
+            android:exported="true" />
+        <activity
             android:name=".BookListMainActivity"
             android:exported="true">
             <intent-filter>
