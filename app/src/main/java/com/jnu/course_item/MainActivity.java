@@ -26,7 +26,13 @@ public class MainActivity extends AppCompatActivity {
         TabLayoutMediator tabLayoutMediator=new TabLayoutMediator(tabLayoutHeader, viewPagerFragments, new TabLayoutMediator.TabConfigurationStrategy() {
             @Override
             public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
-                tab.setText("biaoti"+position);
+                if(position==0)
+                    tab.setText("图书");
+                else if (position==1)
+                    tab.setText("新闻");
+                else
+                    tab.setText("卖家");
+
             }
         });
         tabLayoutMediator.attach();
@@ -47,8 +53,11 @@ public class MainActivity extends AppCompatActivity {
             {
                 case 0:
                     return BookListFragment.newInstance();
-                default:
+
+                case 1:
                     return WebViewFragment.newInstance();
+                default:
+                    return MapFragment.newInstance();
             }
         }
 

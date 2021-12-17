@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -203,7 +204,7 @@ public class BookListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        initDate();
+       // initDate();
 
         View rootView=inflater.inflate(R.layout.fragment_book_list,container,false);
 
@@ -212,7 +213,19 @@ public class BookListFragment extends Fragment {
         mainRecycleView.setLayoutManager(layoutManager);
 
         recyclerViewAdapter = new BookListFragment.MyRecyclerViewAdapter(books);
+        Log.d("tag",recyclerViewAdapter.toString());
         mainRecycleView.setAdapter(recyclerViewAdapter);
+        if (recyclerViewAdapter == null) {
+            Log.e("TAG", "No adapter attached; skipping layout");
+            // leave the state in START
+
+        }
+        if (layoutManager == null) {
+            Log.e("TAG", "No layout manager attached; skipping layout");
+            // leave the state in START
+
+        }
+
 
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_book_list, container, false);
