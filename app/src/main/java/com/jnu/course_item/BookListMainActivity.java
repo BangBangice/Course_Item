@@ -2,12 +2,10 @@ package com.jnu.course_item;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.ContextMenu;
@@ -16,10 +14,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.jnu.course_item.model.Book;
+import com.jnu.course_item.ui.InputActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -157,7 +157,7 @@ public class BookListMainActivity extends AppCompatActivity {
 //                        });
 //                        alertDialogBuiler.create().show();;
                         //对话框，不要了
-                        intent=new Intent(BookListMainActivity.this,InputActivity.class);
+                        intent=new Intent(BookListMainActivity.this, InputActivity.class);
                         intent.putExtra("position",position);
                         BookListMainActivity.this.startActivityForResult(intent, REQUEST_CODE_ADD);
 

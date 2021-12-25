@@ -15,7 +15,7 @@
         <meta-data    android:name="com.baidu.lbsapi.API_KEY"  android:value= "GZOcrjY8vHpSsHLnxrWp5iPoHd7viumU" />
 
         <activity
-            android:name=".InputActivity"
+            android:name=".ui.InputActivity"
             android:exported="true" />
         <activity
             android:name=".BookListMainActivity"

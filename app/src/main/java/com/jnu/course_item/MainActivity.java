@@ -11,6 +11,10 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+import com.jnu.course_item.ui.WebViewFragment;
+import com.jnu.course_item.ui.BookListFragment;
+import com.jnu.course_item.ui.GameFragment;
+import com.jnu.course_item.ui.MapFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initTab();
+
+    }
+
+    private void initTab() {
         ViewPager2 viewPagerFragments=findViewById(R.id.viewpager2_content);
         viewPagerFragments.setAdapter(new MyFragmentAdpater(this));
 
@@ -30,13 +39,14 @@ public class MainActivity extends AppCompatActivity {
                     tab.setText("图书");
                 else if (position==1)
                     tab.setText("新闻");
-                else
+                else if(position==2)
                     tab.setText("卖家");
+                else
+                    tab.setText("游戏");
 
             }
         });
         tabLayoutMediator.attach();
-
     }
 
     private class MyFragmentAdpater extends FragmentStateAdapter {
@@ -56,14 +66,16 @@ public class MainActivity extends AppCompatActivity {
 
                 case 1:
                     return WebViewFragment.newInstance();
-                default:
+                case 2:
                     return MapFragment.newInstance();
+                default:
+                    return GameFragment.newInstance();
             }
         }
 
         @Override
         public int getItemCount() {
-            return 3;
+            return 4;
         }
     }
 }
