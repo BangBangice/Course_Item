@@ -1,4 +1,4 @@
-package com.jnu.course_item.ui;
+package com.jnu.course_item.ui.web;
 
 import android.os.Bundle;
 

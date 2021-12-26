@@ -1,4 +1,4 @@
-package com.jnu.course_item.ui;
+package com.jnu.course_item.ui.game;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;

@@ -1,4 +1,4 @@
-package com.jnu.course_item.view;
+package com.jnu.course_item.ui.game.view;
 
 import android.content.Context;
 import android.graphics.Bitmap;

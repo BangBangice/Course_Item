@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.GameFragment">
+    tools:context=".ui.game.GameFragment">
 
-    <com.jnu.course_item.view.GameView
+    <com.jnu.course_item.ui.game.view.GameView
         android:layout_height="match_parent"
         android:layout_width="match_parent"
        >
 
-    </com.jnu.course_item.view.GameView>
+    </com.jnu.course_item.ui.game.view.GameView>
 
 
 </FrameLayout>

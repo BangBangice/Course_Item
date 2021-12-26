@@ -11,10 +11,11 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
-import com.jnu.course_item.ui.WebViewFragment;
-import com.jnu.course_item.ui.BookListFragment;
-import com.jnu.course_item.ui.GameFragment;
-import com.jnu.course_item.ui.MapFragment;
+import com.jnu.course_item.ui.book.BookItem;
+import com.jnu.course_item.ui.web.WebViewFragment;
+import com.jnu.course_item.ui.book.BookListFragment;
+import com.jnu.course_item.ui.game.GameFragment;
+import com.jnu.course_item.ui.map.MapFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             switch(position)
             {
                 case 0:
-                    return BookListFragment.newInstance();
+                    return BookItem.newInstance();
 
                 case 1:
                     return WebViewFragment.newInstance();
